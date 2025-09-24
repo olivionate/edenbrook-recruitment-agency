@@ -10,10 +10,10 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import recruitmentImage from "@/assets/recruitment-service.jpg";
-import headhuntingImage from "@/assets/headhunting.jpg";
-import trainingImage from "@/assets/training.jpg";
-import consultancyImage from "@/assets/consultancy.jpg";
+import recruitmentImage from "@/assets/african-recruitment.jpg";
+import headhuntingImage from "@/assets/african-headhunting.jpg";
+import trainingImage from "@/assets/african-training.jpg";
+import consultancyImage from "@/assets/african-consultancy.jpg";
 
 const ServicesSection = () => {
   const services = [

@@ -1,6 +1,13 @@
 import { useState } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import edenbookLogo from "@/assets/edenbrook-logo.png";
 
 const Navigation = () => {
@@ -9,9 +16,17 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Global Reach", href: "#global" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const serviceItems = [
+    { name: "Local & Overseas Recruitment", href: "/services/local-recruitment" },
+    { name: "Executive Headhunting", href: "/services/headhunting" },
+    { name: "Training & Capacity Building", href: "/services/training" },
+    { name: "HR Consultancy", href: "/services/consultancy" },
+    { name: "Expatriate Services", href: "/services/expatriate" },
+    { name: "Payroll & Outsourcing", href: "/services/payroll" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -42,6 +57,26 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-foreground hover:text-brand-orange transition-colors duration-300 font-medium">
+                <span>Services</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border-border shadow-lg z-50">
+                {serviceItems.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <Link 
+                      to={service.href}
+                      className="text-foreground hover:text-brand-orange hover:bg-secondary transition-colors duration-300 cursor-pointer"
+                    >
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Contact Info & CTA */}
@@ -81,6 +116,23 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
+              
+              {/* Mobile Services Menu */}
+              <div className="py-2">
+                <p className="text-foreground font-medium mb-2">Services</p>
+                <div className="pl-4 space-y-2">
+                  {serviceItems.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block text-muted-foreground hover:text-brand-orange transition-colors duration-300 py-1"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-3">
                   <Phone className="h-4 w-4" />

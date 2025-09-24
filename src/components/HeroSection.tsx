@@ -1,6 +1,6 @@
 import { ArrowRight, Users, Globe, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-african.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
