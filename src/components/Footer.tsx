@@ -89,9 +89,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-orange flex-shrink-0 mt-1" />
                 <div className="text-gray-300 text-sm">
-                  <p>4th Floor, Ruprani House, Room 414</p>
-                  <p>Mokhtar Daddah Street, Nairobi</p>
-                  <p>P.O. Box 2097 – 00621 Nairobi</p>
+                  <p>2nd Floor, Room 225, Delta House</p>
+                  <p>University Way, Nairobi CBD</p>
+                  <p>P.O. Box 2097 - 00621 Village Market</p>
                 </div>
               </div>
               

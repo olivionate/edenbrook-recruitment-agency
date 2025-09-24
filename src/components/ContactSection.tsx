@@ -23,9 +23,9 @@ const ContactSection = () => {
       icon: MapPin,
       title: "Physical Address",
       details: [
-        "4th Floor, Ruprani House, Room 414",
-        "Mokhtar Daddah Street, Nairobi",
-        "P.O. Box 2097 – 00621 Nairobi"
+        "2nd Floor, Room 225, Delta House",
+        "University Way, Nairobi CBD",
+        "P.O. Box 2097 - 00621 Village Market"
       ],
       color: "text-red-600"
     },
