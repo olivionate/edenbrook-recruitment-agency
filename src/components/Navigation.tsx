@@ -13,9 +13,12 @@ import edenbookLogo from "@/assets/edenbrook-logo.png";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
+  const navItemsBefore = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+  ];
+
+  const navItemsAfter = [
     { name: "Global Reach", href: "#global" },
     { name: "Contact", href: "#contact" },
   ];
@@ -48,7 +51,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItemsBefore.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
@@ -77,6 +80,16 @@ const Navigation = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {navItemsAfter.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
 
           {/* Contact Info & CTA */}
@@ -107,7 +120,7 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+              {navItemsBefore.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
@@ -133,6 +146,17 @@ const Navigation = () => {
                   ))}
                 </div>
               </div>
+
+              {navItemsAfter.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
+                >
+                  {item.name}
+                </button>
+              ))}
+
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-3">
                   <Phone className="h-4 w-4" />
