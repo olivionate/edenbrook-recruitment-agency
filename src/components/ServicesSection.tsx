@@ -16,6 +16,12 @@ import trainingImage from "@/assets/african-training.jpg";
 import consultancyImage from "@/assets/african-consultancy.jpg";
 
 const ServicesSection = () => {
+  const scrollToContact = () => {
+    const element = document.querySelector("#contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const services = [
     {
       icon: Users,
@@ -137,6 +143,7 @@ const ServicesSection = () => {
                 <Button 
                   variant="outline" 
                   className="w-full mt-4 group-hover:bg-brand-orange group-hover:text-white group-hover:border-brand-orange transition-all duration-300"
+                  onClick={scrollToContact}
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -155,6 +162,7 @@ const ServicesSection = () => {
           <Button 
             size="lg"
             className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-4 text-lg font-semibold rounded-xl"
+            onClick={scrollToContact}
           >
             Schedule a Consultation
             <ArrowRight className="ml-2 h-5 w-5" />
