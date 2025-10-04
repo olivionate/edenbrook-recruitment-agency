@@ -15,7 +15,7 @@ const Navigation = () => {
 
   const navItemsBefore = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
+    { name: "About Us", href: "#about" },
   ];
 
   const navItemsAfter = [
