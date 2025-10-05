@@ -1,25 +1,7 @@
-import { CheckCircle, Award, Users, Globe2 } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
-  const features = [
-    {
-      icon: Award,
-      title: "Leading Expertise",
-      description: "One of Kenya's top recruitment agencies with global reach"
-    },
-    {
-      icon: Users,
-      title: "Tailored Solutions",
-      description: "Customized HR strategies for SMEs to multinationals"
-    },
-    {
-      icon: Globe2,
-      title: "Global Network",
-      description: "Operating across 20+ countries worldwide"
-    }
-  ];
-
   const values = [
     { title: "Integrity", description: "We do the right thing" },
     { title: "Reliability", description: "Consistently deliver quality services" },
@@ -43,7 +25,7 @@ const AboutSection = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           {/* Text Content */}
           <div className="space-y-6">
             <div className="space-y-4">
@@ -62,7 +44,7 @@ const AboutSection = () => {
             </div>
 
             {/* Mission & Vision */}
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="p-6 bg-brand-navy/5 rounded-xl border border-brand-navy/10">
                 <h4 className="font-semibold text-brand-navy mb-2">Mission Statement</h4>
                 <p className="text-muted-foreground">
@@ -78,25 +60,6 @@ const AboutSection = () => {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="space-y-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="interactive-card">
-                <CardContent className="flex items-start space-x-4 p-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-brand-orange/10 rounded-lg flex items-center justify-center">
-                      <feature.icon className="h-6 w-6 text-brand-orange" />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-brand-navy mb-2">{feature.title}</h4>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
 
