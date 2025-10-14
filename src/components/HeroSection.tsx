@@ -37,31 +37,31 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-slide-up">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-slide-up px-4">
             Find Your Perfect
             <span className="block text-brand-orange">Talent Match</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-slide-up">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-slide-up px-4">
             Edenbrook Recruitment Agency connects businesses with exceptional talent across 20+ countries. 
             From headhunting to HR consultancy, we deliver sustainable people management solutions.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-slide-up">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 animate-fade-slide-up px-4 w-full max-w-md sm:max-w-none mx-auto">
             <Button
               size="lg"
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-4 text-lg font-semibold rounded-xl hover-lift"
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl hover-lift w-full sm:w-auto min-h-[48px]"
               onClick={() => scrollToSection("#services")}
             >
               Explore Our Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg font-semibold rounded-xl"
+              className="border-white text-white hover:bg-white hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl w-full sm:w-auto min-h-[48px]"
               onClick={() => scrollToSection("#contact")}
             >
               Get in Touch
@@ -69,14 +69,14 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-slide-up">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto animate-fade-slide-up px-4">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/20 rounded-full mb-4">
-                  <stat.icon className="h-8 w-8 text-brand-orange" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-brand-orange/20 rounded-full mb-3 sm:mb-4">
+                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-brand-orange" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-sm sm:text-base text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>

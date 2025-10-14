@@ -89,21 +89,21 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy mb-4 sm:mb-6">
             Our Services
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
             Comprehensive HR solutions designed to optimize your people-management strategies 
             and drive sustainable business growth.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 px-4">
           {services.map((service, index) => (
             <Card key={index} className="group hover-lift overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
@@ -122,27 +122,27 @@ const ServicesSection = () => {
                 </div>
               </div>
               
-              <CardHeader>
-                <CardTitle className="text-xl text-brand-navy">{service.title}</CardTitle>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg sm:text-xl text-brand-navy">{service.title}</CardTitle>
               </CardHeader>
               
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="space-y-3 sm:space-y-4">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
                 
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <Star className="h-4 w-4 text-brand-orange flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    <div key={idx} className="flex items-start space-x-2">
+                      <Star className="h-4 w-4 text-brand-orange flex-shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
                 <Button 
                   variant="outline" 
-                  className="w-full mt-4 group-hover:bg-brand-orange group-hover:text-white group-hover:border-brand-orange transition-all duration-300"
+                  className="w-full mt-4 group-hover:bg-brand-orange group-hover:text-white group-hover:border-brand-orange transition-all duration-300 min-h-[44px] text-sm sm:text-base"
                   onClick={scrollToContact}
                 >
                   Learn More
@@ -154,18 +154,18 @@ const ServicesSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-hero rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your HR Strategy?</h3>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        <div className="text-center bg-gradient-hero rounded-2xl p-6 sm:p-8 md:p-12 text-white mx-4">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Transform Your HR Strategy?</h3>
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
             Let's discuss how our tailored solutions can help your organization achieve its goals.
           </p>
           <Button 
             size="lg"
-            className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-4 text-lg font-semibold rounded-xl"
+            className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl min-h-[48px] w-full sm:w-auto"
             onClick={scrollToContact}
           >
             Schedule a Consultation
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
       </div>

@@ -51,25 +51,25 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy mb-4 sm:mb-6">
             Get in Touch
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
             Ready to transform your HR strategy? Contact us today for a consultation 
             and discover how we can help your business achieve its goals.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 px-4">
           {/* Contact Form */}
           <Card className="hover-lift">
-            <CardHeader>
-              <CardTitle className="text-2xl text-brand-navy">Send us a Message</CardTitle>
+            <CardHeader className="pb-4">
+              <CardTitle className="text-xl sm:text-2xl text-brand-navy">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name</Label>
                     <Input id="firstName" placeholder="John" required />
@@ -128,7 +128,7 @@ const ContactSection = () => {
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white py-3"
+                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white py-3 min-h-[48px] text-sm sm:text-base"
                 >
                   Send Message
                   <Send className="ml-2 h-4 w-4" />
@@ -138,10 +138,10 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {contactInfo.map((info, index) => (
               <Card key={index} className="interactive-card">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -163,15 +163,15 @@ const ContactSection = () => {
 
             {/* Additional CTA */}
             <Card className="bg-gradient-hero text-white">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                <p className="text-gray-200 mb-6">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ready to Get Started?</h3>
+                <p className="text-sm sm:text-base text-gray-200 mb-4 sm:mb-6">
                   Schedule a free consultation to discuss your HR requirements and discover 
                   how we can transform your people management strategy.
                 </p>
                 <Button 
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-brand-navy"
+                  className="border-white text-white hover:bg-white hover:text-brand-navy min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
                 >
                   Schedule Consultation
                 </Button>

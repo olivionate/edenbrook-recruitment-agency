@@ -14,29 +14,29 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-navy mb-4 sm:mb-6">
             About Us
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
             Discover our journey, values, and commitment to transforming HR solutions 
             for businesses worldwide.
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 px-4">
           {/* Text Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-brand-navy">Our Story</h3>
-              <p className="text-muted-foreground leading-relaxed">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-brand-navy">Our Story</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Edenbrook Recruitment Agency Ltd has grown to become a leading provider of HR solutions 
                 and outsourcing services for companies of all sizes — from new SMEs to the largest multinationals. 
                 Operating from our head offices in Nairobi, we bring sustainable people management strategies 
                 to your business through tailor-made HR solutions.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Our proven track record in talent optimization, retention, employee motivation and engagement, 
                 and employment risk minimization helps companies address complex HR challenges in today's 
                 competitive markets.
@@ -44,17 +44,17 @@ const AboutSection = () => {
             </div>
 
             {/* Mission & Vision */}
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="p-6 bg-brand-navy/5 rounded-xl border border-brand-navy/10">
-                <h4 className="font-semibold text-brand-navy mb-2">Mission Statement</h4>
-                <p className="text-muted-foreground">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
+              <div className="p-4 sm:p-6 bg-brand-navy/5 rounded-xl border border-brand-navy/10">
+                <h4 className="font-semibold text-brand-navy mb-2 text-base sm:text-lg">Mission Statement</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   We deliver valuable services to our clients by continuously reinventing ourselves 
                   to align to the changing needs in the market place.
                 </p>
               </div>
-              <div className="p-6 bg-brand-orange/5 rounded-xl border border-brand-orange/10">
-                <h4 className="font-semibold text-brand-navy mb-2">Our Vision</h4>
-                <p className="text-muted-foreground">
+              <div className="p-4 sm:p-6 bg-brand-orange/5 rounded-xl border border-brand-orange/10">
+                <h4 className="font-semibold text-brand-navy mb-2 text-base sm:text-lg">Our Vision</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   To become a global leader in Human Resource development by consistently delivering 
                   an unmatched customer experience enabled by a progressive culture.
                 </p>
@@ -64,17 +64,17 @@ const AboutSection = () => {
         </div>
 
         {/* Values Section */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-brand-navy mb-8">Our Core Values</h3>
-          <div className="grid md:grid-cols-5 gap-6">
+        <div className="text-center px-4">
+          <h3 className="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 sm:mb-8">Our Core Values</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
             {values.map((value, index) => (
               <Card key={index} className="interactive-card text-center">
-                <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-5 w-5 text-white" />
+                <CardContent className="p-4 sm:p-6">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-brand-orange rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
-                  <h4 className="font-semibold text-brand-navy mb-2">{value.title}</h4>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
+                  <h4 className="font-semibold text-brand-navy mb-1 sm:mb-2 text-sm sm:text-base">{value.title}</h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
