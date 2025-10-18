@@ -14,13 +14,13 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItemsBefore = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
+    { name: "Home", href: "/", isRoute: true },
+    { name: "About Us", href: "/about", isRoute: true },
   ];
 
   const navItemsAfter = [
-    { name: "Global Reach", href: "#global" },
-    { name: "Contact", href: "#contact" },
+    { name: "Global Reach", href: "/global-reach", isRoute: true },
+    { name: "Contact", href: "/contact", isRoute: true },
   ];
 
   const serviceItems = [
@@ -52,13 +52,23 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItemsBefore.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </button>
+              item.isRoute ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
             
             {/* Services Dropdown */}
@@ -82,13 +92,23 @@ const Navigation = () => {
             </DropdownMenu>
 
             {navItemsAfter.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </button>
+              item.isRoute ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-foreground hover:text-brand-orange transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
           </div>
 
@@ -98,13 +118,14 @@ const Navigation = () => {
               <Phone className="h-4 w-4" />
               <span>0720 517 303</span>
             </div>
-            <Button 
-              variant="default" 
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white"
-              onClick={() => scrollToSection("#contact")}
-            >
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button 
+                variant="default" 
+                className="bg-brand-orange hover:bg-brand-orange-dark text-white"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,13 +142,24 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItemsBefore.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
-                >
-                  {item.name}
-                </button>
+                item.isRoute ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
               
               {/* Mobile Services Menu */}
@@ -148,13 +180,24 @@ const Navigation = () => {
               </div>
 
               {navItemsAfter.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
-                >
-                  {item.name}
-                </button>
+                item.isRoute ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-left text-foreground hover:text-brand-orange transition-colors duration-300 font-medium py-2"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
 
               <div className="pt-4 border-t border-border">
@@ -166,13 +209,14 @@ const Navigation = () => {
                   <Mail className="h-4 w-4" />
                   <span>info@edenbrook.co.ke</span>
                 </div>
-                <Button 
-                  variant="default" 
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white"
-                  onClick={() => scrollToSection("#contact")}
-                >
-                  Get Started
-                </Button>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button 
+                    variant="default" 
+                    className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white"
+                  >
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
