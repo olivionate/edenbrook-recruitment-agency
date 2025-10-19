@@ -1,12 +1,13 @@
 import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook } from "lucide-react";
 import edenbookLogo from "@/assets/edenbrook-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Global Reach", href: "#global" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Global Reach", href: "/global-reach" },
+    { name: "Contact", href: "/contact" }
   ];
 
   const services = [
@@ -18,12 +19,6 @@ const Footer = () => {
     "Payroll & Outsourcing"
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <footer className="bg-brand-navy text-white">
@@ -57,12 +52,12 @@ const Footer = () => {
             <ul className="space-y-2 sm:space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
+                  <Link
+                    to={link.href}
                     className="text-sm sm:text-base text-gray-300 hover:text-brand-orange transition-colors duration-300"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
