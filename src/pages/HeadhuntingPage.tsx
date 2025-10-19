@@ -219,14 +219,18 @@ const HeadhuntingPage = () => {
                     Let's discuss your executive search requirements confidentially.
                   </p>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-brand-navy">
-                      <Phone className="h-4 w-4 mr-2" />
-                      Call: 0720 517 303
-                    </Button>
-                    <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-brand-navy">
-                      <Mail className="h-4 w-4 mr-2" />
-                      Schedule Consultation
-                    </Button>
+                    <a href="tel:0720517303">
+                      <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-brand-navy">
+                        <Phone className="h-4 w-4 mr-2" />
+                        Call: 0720 517 303
+                      </Button>
+                    </a>
+                    <Link to="/contact">
+                      <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-brand-navy">
+                        <Mail className="h-4 w-4 mr-2" />
+                        Schedule Consultation
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

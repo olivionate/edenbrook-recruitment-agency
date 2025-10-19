@@ -10,18 +10,13 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import recruitmentImage from "@/assets/african-recruitment.jpg";
 import headhuntingImage from "@/assets/african-headhunting.jpg";
 import trainingImage from "@/assets/african-training.jpg";
 import consultancyImage from "@/assets/african-consultancy.jpg";
 
 const ServicesSection = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const services = [
     {
       icon: Users,
@@ -140,14 +135,15 @@ const ServicesSection = () => {
                   ))}
                 </div>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full mt-4 group-hover:bg-brand-orange group-hover:text-white group-hover:border-brand-orange transition-all duration-300 min-h-[44px] text-sm sm:text-base"
-                  onClick={scrollToContact}
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link to="/contact" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full mt-4 group-hover:bg-brand-orange group-hover:text-white group-hover:border-brand-orange transition-all duration-300 min-h-[44px] text-sm sm:text-base"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -159,14 +155,15 @@ const ServicesSection = () => {
           <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
             Let's discuss how our tailored solutions can help your organization achieve its goals.
           </p>
-          <Button 
-            size="lg"
-            className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl min-h-[48px] w-full sm:w-auto"
-            onClick={scrollToContact}
-          >
-            Schedule a Consultation
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg"
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl min-h-[48px] w-full sm:w-auto"
+            >
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

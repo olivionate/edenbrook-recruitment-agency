@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   const contactInfo = [
@@ -169,12 +170,14 @@ const ContactSection = () => {
                   Schedule a free consultation to discuss your HR requirements and discover 
                   how we can transform your people management strategy.
                 </p>
-                <Button 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-brand-navy min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
-                >
-                  Schedule Consultation
-                </Button>
+                <Link to="/contact">
+                  <Button 
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-brand-navy min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
+                  >
+                    Schedule Consultation
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
