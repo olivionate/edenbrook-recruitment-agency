@@ -1,5 +1,6 @@
 import { ArrowRight, Users, Globe, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-african.jpg";
 
 const HeroSection = () => {
@@ -58,14 +59,15 @@ const HeroSection = () => {
               Explore Our Services
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl w-full sm:w-auto min-h-[48px]"
-              onClick={() => scrollToSection("#contact")}
-            >
-              Get in Touch
-            </Button>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl w-full sm:w-auto min-h-[48px]"
+              >
+                Get in Touch
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
