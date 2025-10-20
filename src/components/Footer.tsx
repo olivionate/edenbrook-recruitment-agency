@@ -118,15 +118,15 @@ const Footer = () => {
               © 2024 Edenbrook Recruitment Agency Ltd. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              <Link to="/privacy-policy" className="text-gray-300 hover:text-brand-orange transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="text-gray-300 hover:text-brand-orange transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="text-gray-300 hover:text-brand-orange transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

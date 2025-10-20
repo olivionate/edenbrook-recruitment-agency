@@ -14,6 +14,9 @@ import TrainingPage from "./pages/TrainingPage";
 import ConsultancyPage from "./pages/ConsultancyPage";
 import ExpatriateServicesPage from "./pages/ExpatriateServicesPage";
 import PayrollPage from "./pages/PayrollPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
+import CookiePolicyPage from "./pages/CookiePolicyPage";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +37,9 @@ const App = () => (
           <Route path="/services/consultancy" element={<ConsultancyPage />} />
           <Route path="/services/expatriate" element={<ExpatriateServicesPage />} />
           <Route path="/services/payroll" element={<PayrollPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
