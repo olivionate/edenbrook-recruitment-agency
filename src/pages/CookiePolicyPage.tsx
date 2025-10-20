@@ -6,9 +6,9 @@ const CookiePolicyPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-grow bg-background">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-brand-navy mb-8">Cookie Policy</h1>
+      <main className="flex-grow bg-background pt-24 md:pt-28">
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-8">Cookie Policy</h1>
           
           <div className="prose max-w-4xl space-y-6 text-gray-700">
             <section>
